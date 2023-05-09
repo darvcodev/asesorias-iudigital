@@ -6,6 +6,7 @@ const proyectoRoutes = require("./lib/proyectos/routes/proyectoRoutes");
 const clienteRoutes = require("./lib/clientes/routes/clienteRoutes");
 const universidadRoutes = require("./lib/universidades/routes/universidadRoutes");
 const etapaRoutes = require("./lib/etapas/routes/etapaRoutes");
+const tipoProyectoRoutes = require("./lib/tipo_proyectos/routes/tipoProyectoRoutes");
 
 // Inicializar la app de express
 const app = express();
@@ -21,6 +22,7 @@ app.use("/proyectos", proyectoRoutes);
 app.use("/clientes", clienteRoutes);
 app.use("/universidades", universidadRoutes);
 app.use("/etapas", etapaRoutes);
+app.use("/tipo-proyectos", tipoProyectoRoutes);
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
