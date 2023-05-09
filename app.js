@@ -1,7 +1,10 @@
 const express = require("express");
+
 const { main } = require("./config/database");
+
 const proyectoRoutes = require("./lib/proyectos/routes/proyectoRoutes");
 const clienteRoutes = require("./lib/clientes/routes/clienteRoutes");
+const universidadRoutes = require("./lib/universidades/routes/universidadRoutes");
 
 // Inicializar la app de express
 const app = express();
@@ -15,6 +18,7 @@ app.use(express.json());
 // Configurar rutas de la API
 app.use("/proyectos", proyectoRoutes);
 app.use("/clientes", clienteRoutes);
+app.use("/universidades", universidadRoutes);
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
