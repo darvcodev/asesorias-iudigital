@@ -1,5 +1,5 @@
 const express = require("express");
-const { main } = require("./db");
+const { main } = require("./config/database");
 const proyectoRoutes = require("./lib/proyectos/routes/proyectoRoutes");
 const clienteRoutes = require("./lib/clientes/routes/clienteRoutes");
 

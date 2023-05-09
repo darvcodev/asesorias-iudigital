@@ -2,10 +2,10 @@
   "name": "asesorias-iudigital",
   "version": "1.0.0",
   "description": "Aesorías académicas para estudiantes de pregrado y postgrado de la IUDIGITAL",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "test",
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "author": "Darvcode",
   "license": "ISC",
