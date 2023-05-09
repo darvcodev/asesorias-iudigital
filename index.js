@@ -1,5 +1,6 @@
 const express = require("express");
 const { main } = require("./db");
+const proyectoRoutes = require("./lib/proyectos/routes/proyectoRoutes");
 
 // Inicializar la app de express
 const app = express();
@@ -10,6 +11,8 @@ main().catch((err) => console.log(err));
 // Configurar middleware para parsear JSON
 app.use(express.json());
 
+// Configurar rutas de la API
+app.use("/proyectos", proyectoRoutes);
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
