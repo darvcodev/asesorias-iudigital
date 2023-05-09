@@ -44,6 +44,56 @@ El proyecto se encuentra organizado de la siguiente manera:
 - `/controllers/`: Contiene los controladores de la aplicación por modulo.
 - `/models/`: Contiene los modelos de la base de datos por modulo.
 - `/routes/`: Contiene las rutas de la aplicación por modulo.
+-
+
+## Estrucutura de carpetas pensando en escalabilidad
+
+```
+.
+├── app.js
+├── package.json
+├── package-lock.json
+├── README.md
+├── config
+│   └── database.js
+├── lib
+│   ├── clientes
+│   │   ├── controllers
+│   │   │   └── clienteController.js
+│   │   ├── models
+│   │   │   └── clienteModel.js
+│   │   └── routes
+│   │       └── clienteRoutes.js
+│   ├── etapas
+│   │   ├── controllers
+│   │   │   └── etapaController.js
+│   │   ├── models
+│   │   │   └── etapaModel.js
+│   │   └── routes
+│   │       └── etapaRoutes.js
+│   ├── proyectos
+│   │   ├── controllers
+│   │   │   └── proyectoController.js
+│   │   ├── models
+│   │   │   └── proyectoModel.js
+│   │   └── routes
+│   │       └── proyectoRoutes.js
+│   ├── tipoProyectos
+│   │   ├── controllers
+│   │   │   └── tipoProyectoController.js
+│   │   ├── models
+│   │   │   └── tipoProyectoModel.js
+│   │   └── routes
+│   │       └── tipoProyectoRoutes.js
+│   └── universidades
+│       ├── controllers
+│       │   └── universidadController.js
+│       ├── models
+│       │   └── universidadModel.js
+│       └── routes
+│           └── universidadRoutes.js
+
+```
 
 ## Licencia
 
