@@ -2,11 +2,11 @@ const express = require("express");
 
 const { main } = require("./config/database");
 
-const proyectoRoutes = require("./lib/proyectos/routes/proyectoRoutes");
-const clienteRoutes = require("./lib/clientes/routes/clienteRoutes");
-const universidadRoutes = require("./lib/universidades/routes/universidadRoutes");
-const etapaRoutes = require("./lib/etapas/routes/etapaRoutes");
-const tipoproyecto = require("./lib/tipo_proyectos/routes/tipoproyectoRoutes");
+const proyectoRoutes = require("./src/proyectos/routes/proyectoRoutes");
+const clienteRoutes = require("./src/clientes/routes/clienteRoutes");
+const universidadRoutes = require("./src/universidades/routes/universidadRoutes");
+const etapaRoutes = require("./src/etapas/routes/etapaRoutes");
+const tipoproyecto = require("./src/tipo_proyectos/routes/tipoproyectoRoutes");
 
 // Inicializar la app de express
 const app = express();

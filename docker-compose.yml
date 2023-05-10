@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    container_name: asesorias-iudigital
+    restart: always
+    build: .
+    ports:
+      - "5000:3000"
+    links:
+      - mongodatabase
+    volumes:
+      - .:/usr/src/app
+  proyectos:
+    container_name: asesorias-iudigital-proyectos
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.proyectos
+    ports:
+      - "5001:3000"
+    links:
+      - mongodatabase
+    volumes:
+      - .:/usr/src/app
+  mongodatabase:
+    container_name: mongodb-iudigital
+    image: mongo
+    ports:
+      - "27018:27017"

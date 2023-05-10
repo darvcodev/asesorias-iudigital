@@ -54,9 +54,13 @@ El proyecto se encuentra organizado de la siguiente manera:
 ├── package.json
 ├── package-lock.json
 ├── README.md
+├── Dockerfile
+├── docker-compose.yml
+├── .gitignore
+├── .dockerignore
 ├── config
 │   └── database.js
-├── lib
+├── src
 │   ├── clientes
 │   │   ├── controllers
 │   │   │   └── clienteController.js
@@ -78,6 +82,7 @@ El proyecto se encuentra organizado de la siguiente manera:
 │   │   │   └── proyectoModel.js
 │   │   └── routes
 │   │       └── proyectoRoutes.js
+│   ├── Dockerfile
 │   ├── tipoProyectos
 │   │   ├── controllers
 │   │   │   └── tipoProyectoController.js
