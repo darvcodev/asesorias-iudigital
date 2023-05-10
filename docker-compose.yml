@@ -15,7 +15,6 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: Dockerfile.proyectos
     ports:
       - "5001:3000"
     links:
