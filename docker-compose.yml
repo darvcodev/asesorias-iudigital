@@ -6,23 +6,25 @@ services:
     build: .
     ports:
       - "5000:3000"
-    links:
-      - mongodatabase
     volumes:
       - .:/usr/src/app
+      
   proyectos:
     container_name: asesorias-iudigital-proyectos
     restart: always
     build:
       context: .
+      dockerfile: Dockerfile.proyectos
     ports:
       - "5001:3000"
-    links:
-      - mongodatabase
     volumes:
       - .:/usr/src/app
-  mongodatabase:
-    container_name: mongodb-iudigital
-    image: mongo
+
+  nginx:
+    container_name: asesorias-iudigital-nginx
+    restart: always
+    image: nginx
     ports:
-      - "27018:27017"
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
