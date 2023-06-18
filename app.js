@@ -2,6 +2,7 @@ const express = require("express");
 
 const { main } = require("./config/database");
 
+// Rutas de la API
 const proyectoRoutes = require("./src/proyectos/routes/proyectoRoutes");
 const clienteRoutes = require("./src/clientes/routes/clienteRoutes");
 const universidadRoutes = require("./src/universidades/routes/universidadRoutes");
