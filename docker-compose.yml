@@ -8,7 +8,7 @@ services:
       - "5000:3000"
     volumes:
       - .:/usr/src/app
-      
+
   proyectos:
     container_name: asesorias-iudigital-proyectos
     restart: always
@@ -28,3 +28,16 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+
+  jenkins:
+    container_name: jenkins
+    restart: always
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_data:/var/jenkins_home
+
+volumes:
+  jenkins_data:
